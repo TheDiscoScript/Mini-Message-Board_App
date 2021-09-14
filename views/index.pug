@@ -1,5 +1,17 @@
 extends layout
 
+
 block content
   h1= title
-  p Welcome to #{title}
+  p click button bellow to create your post
+  button: a(href=" /new") CLICK ME!
+
+  ul
+    each message in messages
+      li
+        h1= message.title
+        h2= "from " + message.user
+        h3= message.text
+        h4= message.added
+      
+
